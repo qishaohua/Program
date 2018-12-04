@@ -1,19 +1,19 @@
-0 个类型结构大小 sizeof
-3. 语法：
+# 0 个类型结构大小 sizeof
+## 1. 语法：
 
 sizeof有三种语法形式，如下：
 1) sizeof( object );    // sizeof( 对象 );
 2) sizeof( type_name ); // sizeof( 类型 );
 3) sizeof object;       // sizeof 对象; 
 
-2. 指针变量的sizeof 4/8
+## 2. 指针变量的sizeof 4/8
 
  与计算机类型有关，32为计算机，地址长度为4字节
  64位的计算机，地长度为 8字节
  这里的指针包括所有类型的指针:
     字符指针、整形指针、字符串指针、指针的指针、函数指针、数组指针等。
 
-3.数组的sizeof
+## 3.数组的sizeof
 
 数组的sizeof值等于数组所占用的内存字节数，如：
 char a1[] = "abc";
@@ -28,7 +28,7 @@ sizeof( a2 ); // 结果为3*4=12（依赖于int,这里int为4字节）
 int c1 = sizeof( a1 ) / sizeof( char ); // 总长度/单个元素的长度(知道元素类型)
 int c2 = sizeof( a1 ) / sizeof( a1[0] ); // 总长度/第一个元素的长度(不知道元素类型)
 
-4. sizeof进行结构体大小的判断
+## 4. sizeof进行结构体大小的判断
 
     需要看编译器是几个字节对齐 的，一般为4字节对齐
 typedef struct
